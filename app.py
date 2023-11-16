@@ -15,6 +15,11 @@ connect_db(app)
 
 app.app_context().push()
 
+@app.route('/')
+def index_page():
+    cupcakes=Cupcake.query.all()
+    return render_template('index.html', cupcakes=cupcakes)
+
 @app.route('/api/cupcakes')
 def list_cupcakes():
     '''Get data about all cupcakes'''
