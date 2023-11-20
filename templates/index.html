@@ -13,14 +13,17 @@
   </head>
   <body>
     <h1>Cupcake list</h1>
-    <ul>
+    <ul id="cupcake_list">
+
+    </ul>
+    <!-- <ul>
       {% for cupcake in cupcakes %}
       <li>
         {{cupcake.flavor}} -
         <button class="delete_cupcake" data-id="{{cupcake.id}}">X</button>
       </li>
       {% endfor %}
-    </ul>
+    </ul> -->
     <h3>Add a cupcake</h3>
     <form action="">
         <label for="flavor">Flavor</label>
@@ -35,6 +38,7 @@
         <label for="image">Image</label>
         <input type="text" name="image" id="image">
         </br>
+        <button>Sumbit</button>
     </form>
 
 
